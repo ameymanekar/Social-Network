@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      h1 {color:red;}
+    </style>
+</head>
+<body>
+  <h1>
+     {{message}}
+{% for item in aa %}
+      <table size="50%" border="2">
+<tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+    <td><a href="updatefrom.html"> Update</a></td>
+</tr>
+      </table>
+{% endfor %}
+
+  </h1>
+
+</body>
+</html>

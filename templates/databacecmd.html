@@ -1,0 +1,48 @@
+
+
+use hvpm
+
+create table snuser (
+sid integer primary key auto_increment,
+uname varchar(50),
+email varchar(50),
+phoneno varchar(50),
+password varchar(50),
+DOB varchar(50),
+loc varchar(50),
+gender varchar(50));
+
+
+create table photoloc (
+sid integer primary key auto_increment,
+email varchar(500),
+loc varchar(500));
+
+
+
+create table friendreq (
+sid integer primary key auto_increment,
+fromf varchar(500),
+tof varchar(500),
+uname varchar(500),
+user varchar(500));
+
+
+create table friends (
+sid integer primary key auto_increment,
+f1 varchar(500),
+f2 varchar(500),
+f3 varchar(500),
+f4 varchar(500));
+
+
+
+
+
+------------------------------------------------------------------
+
+
+drop table friends;
+drop table friendreq;
+drop table photoloc;
+drop table snuser;

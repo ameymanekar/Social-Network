@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>Home</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Exclusive Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="/../static/css/bootstrap22.css">
+	<!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="/../static/css/style22.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="/../static/css/font-awesome22.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+	<!-- Web-Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<!-- //Web-Fonts -->
+
+</head>
+<body>
+
+	<!-- header -->
+		<!-- navigation -->
+		<div class="main-top">
+		 <header>
+			<div class="container-fluid px-lg-5 ">
+				<nav class="mnu mx-auto">
+						  <label for="drop" class="toggle">Menu</label>
+							<input type="checkbox" id="drop">
+							<ul class="menu">
+								<li class="mr-lg-4 mr-3"><a href="{{ url_for('home')}}">Home</a></li>
+								<li class="mr-lg-4 mr-3"><a href="{{ url_for('profile')}}" class="scroll">Profile</a></li>
+
+								<li class="mr-lg-4 mr-3  active"><a href="{{ url_for('friends')}}" class="scroll">Search Friends</a></li>
+                              {% set testing = session['dot'] %}
+								{% set another = testing %}
+								{% set another2 = NULL %}
+
+								{% if another == another2 %}
+                                <li class="mr-lg-4 mr-3"><a href="{{ url_for('friendreq')}}" class="scroll">Friends Req</a></li>
+								{% else %}
+								  <li class="mr-lg-4 mr-3"><a href="{{ url_for('friendreq')}}" class="scroll">Friends Req  <img src="/../static/images/dot.png " style="height: 10px; width: 10px;"> </a></li>
+								{% endif %}
+								<li class="mr-lg-4 mr-3"><a href="{{ url_for('friends2')}}" class="scroll">Friends</a></li>
+								<li class="mr-lg-4 mr-3"><a href="{{ url_for('setting')}}" class="scroll">Setting</a></li>
+								<li><a href="/" class="scroll">Log Out</a></li>
+							</ul>
+						</nav>
+			</div>
+		</header>
+		</div>
+		<!-- //navigation-->
+<br>
+	<br>
+	<br>
+
+
+<style>
+div.b {
+    text-align: center;
+}
+
+input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    align: center;
+    position: center;
+    text-align: center;
+
+
+}
+
+/* Clear floats after the columns */
+.column:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    background-color: #4CAF50;
+    color: white;
+}
+.myButton {
+	-moz-box-shadow:inset -2px 4px 8px 1px #23395e;
+	-webkit-box-shadow:inset -2px 4px 8px 1px #23395e;
+	box-shadow:inset -2px 4px 8px 1px #23395e;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2e466e), color-stop(1, #415989));
+	background:-moz-linear-gradient(top, #2e466e 5%, #415989 100%);
+	background:-webkit-linear-gradient(top, #2e466e 5%, #415989 100%);
+	background:-o-linear-gradient(top, #2e466e 5%, #415989 100%);
+	background:-ms-linear-gradient(top, #2e466e 5%, #415989 100%);
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e466e', endColorstr='#415989',GradientType=0);
+	background-color:#2e466e;
+	-moz-border-radius:19px;
+	-webkit-border-radius:19px;
+	border-radius:19px;
+	border:3px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:23px;
+	font-weight:bold;
+	padding:10px 64px;
+	text-decoration:none;
+	text-shadow:1px 13px 4px #263666;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #415989), color-stop(1, #2e466e));
+	background:-moz-linear-gradient(top, #415989 5%, #2e466e 100%);
+	background:-webkit-linear-gradient(top, #415989 5%, #2e466e 100%);
+	background:-o-linear-gradient(top, #415989 5%, #2e466e 100%);
+	background:-ms-linear-gradient(top, #415989 5%, #2e466e 100%);
+	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#415989', endColorstr='#2e466e',GradientType=0);
+	background-color:#415989;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+    </style>
+
+<center>
+
+
+    <h2>Send Request</h2>
+
+<table cellspacing="5px" width="60%" >
+    <th><td><form action="/searchriend" method="post" >
+           <h2> Search : <input type="text" name="search"    placeholder="Search.." size="50%" required >
+           </h2>
+            </form></td></th>
+
+
+        </table>
+
+               <table style="width:60% " id="customers"  border="1"   >
+             <tr>
+
+                    <th>Name</th>
+                    <th>View Profile</th>
+                    <th>Send REQ</th>
+
+                </tr>
+
+{% for row in result %}
+                <tr>
+
+
+
+
+                    <td>   {{row[1]}} </td>
+                    <td>   <form action="/viewpro" method="post" ><INPUT TYPE="SUBMIT" class="myButton" VALUE="View">
+						<INPUT TYPE="hidden" name="email"  VALUE="{{row[2]}}"></form>   </td>
+
+                    <td><form action="/sendreq" method="post" ><INPUT TYPE="SUBMIT" class="myButton" VALUE="Send Req">
+						<INPUT TYPE="hidden" name="email"  VALUE="{{row[2]}}">
+						<INPUT TYPE="hidden" name="uname"  VALUE="{{row[1]}}">
+					<INPUT TYPE="hidden" name="email2"  VALUE="{{session['mess']}}">
+					<INPUT TYPE="hidden" name="user"  VALUE="{{session['user']}}">
+
+					</form></td>
+                       </tr>
+{% endfor %}
+
+
+  </table>
+
+
+
+
+<br>
+
+<h2>{{result2}}<h2>
+</center>
+
+
+
+
+
+</body>
+</html>

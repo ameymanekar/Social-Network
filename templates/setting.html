@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>Home</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Exclusive Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="/../static/css/bootstrap22.css">
+	<!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="/../static/css/style22.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="/../static/css/font-awesome22.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+	<!-- Web-Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<!-- //Web-Fonts -->
+
+</head>
+<body>
+
+	<!-- header -->
+		<!-- navigation -->
+		<div class="main-top">
+		 <header>
+			<div class="container-fluid px-lg-5 ">
+				<nav class="mnu mx-auto">
+						  <label for="drop" class="toggle">Menu</label>
+							<input type="checkbox" id="drop">
+							<ul class="menu">
+								<li class="mr-lg-4 mr-3"><a href="{{ url_for('home')}}">Home</a></li>
+								<li class="mr-lg-4 mr-3"><a href="{{ url_for('profile')}}" class="scroll">Profile</a></li>
+
+								 <li class="mr-lg-4 mr-3"><a href="{{ url_for('friends')}}" class="scroll">Search Friends</a></li>
+								{% set testing = session['dot'] %}
+								{% set another = testing %}
+								{% set another2 = NULL %}
+
+								{% if another == another2 %}
+                                <li class="mr-lg-4 mr-3"><a href="{{ url_for('friendreq')}}" class="scroll">Friends Req</a></li>
+								{% else %}
+								  <li class="mr-lg-4 mr-3"><a href="{{ url_for('friendreq')}}" class="scroll">Friends Req  <img src="/../static/images/dot.png " style="height: 10px; width: 10px;"> </a></li>
+								{% endif %}
+								<li class="mr-lg-4 mr-3"><a href="{{ url_for('friends2')}}" class="scroll">Friends</a></li>
+								<li class="mr-lg-4 mr-3 active"><a href="{{ url_for('setting')}}" class="scroll">Setting</a></li>
+								<li><a href="/" class="scroll">Log Out</a></li>
+							</ul>
+						</nav>
+			</div>
+		</header>
+		</div>
+		<!-- //navigation-->
+<br>
+	<br>
+	<br>
+
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+    </style>
+
+<center>
+                                    <h3>Change Password</h3><br>
+                                    <form action="/setting" method="post">
+
+
+
+<table>
+		 <tr>
+    <th>Email</th>
+    <th>{{session['mess']}}<input type="hidden" name="email" value="{{session['mess']}}" placeholder="Email" required=""></th>
+
+  </tr>
+  <tr>
+    <th>Old Password</th>
+    <th> <input type="password" name="opass" placeholder="Old Password" required=""></th>
+
+  </tr>
+
+  <tr>
+      <th>New Password</th>
+        <th> <input type="password" id="password" name="npass" placeholder="New Password" required=""></th>
+
+  </tr>
+		<tr>
+     <th>Re Password</th>
+      <th><input type="password" id="confirm_password" name="repass" placeholder="Re Password" required=""></th>
+
+  </tr>
+
+	<tr>
+     <th>Change Password</th>
+      <th> <input type="submit" value="Change"></th>
+
+  </tr>
+
+
+</table>
+
+		 <script>
+                var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+                </script>
+
+									</form>
+
+<br>
+	<br>
+	<br>
+	<h2>{{message}}<h2>
+
+</center>
+
+
+
+</body>
+</html>

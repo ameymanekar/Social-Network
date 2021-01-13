@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>Home</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Exclusive Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="/../static/css/bootstrap22.css">
+	<!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="/../static/css/style22.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="/../static/css/font-awesome22.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+	<!-- Web-Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<!-- //Web-Fonts -->
+
+</head>
+<body>
+
+	<!-- header -->
+		<!-- navigation -->
+		<div class="main-top">
+		 <header>
+			<div class="container-fluid px-lg-5 ">
+				<nav class="mnu mx-auto">
+						  <label for="drop" class="toggle">Menu</label>
+							<input type="checkbox" id="drop">
+							<ul class="menu">
+								<li class="mr-lg-4 mr-3"><a href="{{ url_for('home')}}">Home</a></li>
+								<li class="mr-lg-4 mr-3"><a href="{{ url_for('profile')}}" class="scroll">Profile</a></li>
+
+								<li class="mr-lg-4 mr-3"><a href="{{ url_for('friends')}}" class="scroll">Search Friends</a></li>
+                             {% set testing = session['dot'] %}
+								{% set another = testing %}
+								{% set another2 = NULL %}
+
+								{% if another == another2 %}
+                                <li class="mr-lg-4 mr-3"><a href="{{ url_for('friendreq')}}" class="scroll">Friends Req</a></li>
+								{% else %}
+								  <li class="mr-lg-4 mr-3"><a href="{{ url_for('friendreq')}}" class="scroll">Friends Req  <img src="/../static/images/dot.png " style="height: 10px; width: 10px;"> </a></li>
+								{% endif %}
+								<li class="mr-lg-4 mr-3 active"><a href="{{ url_for('friends2')}}" class="scroll">Friends</a></li>
+                                <li class="mr-lg-4 mr-3"><a href="{{ url_for('setting')}}" class="scroll">Setting</a></li>
+								<li><a href="/" class="scroll">Log Out</a></li>
+							</ul>
+						</nav>
+			</div>
+		</header>
+		</div>
+		<!-- //navigation-->
+<br>
+	<br>
+	<br>
+
+
+<style>
+   * { box-sizing: border-box; font-family: Avenir; }
+div#profile-container { display: flex; justify-content: space-between;
+ max-width: 500px;
+    margin: auto;    }
+div#profile-container figure {
+  display: inline-block;
+  }
+div#profile-container figure div {
+  border-radius: 50%;
+  overflow: hidden;
+  background-blend-mode: luminosity;
+  border: 5px solid #000;
+  width: 25rem; height: 25rem;
+  transition: .4s linear;
+  will-change: background-color;
+}
+div#profile-container figure div:hover {
+  border: 8px solid #000;
+  background-color: transparent;
+}
+div#profile-container figcaption {
+  margin-top: 1rem;
+  text-align: center;
+}
+.anna {
+  background: url("{{session['photo']}}")  center
+    hsl(200,50%,50%);
+  background-size: cover;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+body
+{
+    counter-reset: Serial;           /* Set the Serial counter to 0 */
+}
+
+table
+{
+
+}
+
+tr td:first-child:before
+{
+  counter-increment: Serial;      /* Increment the Serial counter */
+  content: " " counter(Serial); /* Display the counter */
+}
+    </style>
+
+
+
+
+    <table><tr>
+        <th>Sr no.</th>
+         <th>Name</th>
+        <th>View Profile</th>
+  </tr>
+        {% for row in result %}
+  <tr>
+      <td></td>
+        <td> {{row[3]}}</td>
+        <td> <form action="/viewpro2" method="post" >
+                        <INPUT TYPE="SUBMIT"  VALUE="View">
+                        <INPUT TYPE="hidden" name="email"  VALUE="{{row[2]}}">
+                    </form></td>
+
+  </tr>
+{% endfor %}
+
+
+</table>
+
+
+
+
+
+</center>
+
+	</div>
+
+</body>
+</html>
